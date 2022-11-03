@@ -57,13 +57,98 @@ In this tutorial I will refer to the tutorial in the pinned message in the OKP4 
 
 1. Automatic Installation
 
+![image](https://user-images.githubusercontent.com/91620434/199699133-c0f0c85b-e35e-456c-9586-7ac415a9b352.png)
+
 ```
 wget -O okp4.sh https://raw.githubusercontent.com/nodesxploit/testnet/main/okp4/okp4.sh && chmod +x okp4.sh && ./okp4.sh
 ```
 
+The picture below is a synchronization process, at this stage please be patient waiting
+_Gambar dibawah ini merupakan proses sinkronisasi, pada tahapan ini mohon untuk bersabar menunngu
+![image](https://user-images.githubusercontent.com/91620434/199699313-5b718770-28ab-4ccf-a037-ab1c07a87050.png)
+![image](https://user-images.githubusercontent.com/91620434/199699333-2c3fb86b-889d-46ce-896b-e6c49b83207c.png)
+
+You can synchronize in minutes with the help of the below command
+_Anda dapat meyinkronisasi dalam hitungan menit dengan bantuan perintah dibawah ini
+
+```
+SNAP_RPC=https://okp4-testnet-rpc.polkachu.com:443
+peers="https://okp4-testnet-rpc.polkachu.com:443"
+sed -i.bak -e  "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.okp4d/config/config.toml
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 500)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
+s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.okp4d/config/config.toml
+
+okp4d tendermint unsafe-reset-all --home /root/.okp4d --keep-addr-book
+systemctl restart okp4d && journalctl -u okp4d -f -o cat
+```
+![image](https://user-images.githubusercontent.com/91620434/199699352-f967311a-0540-4ffd-9495-92185e3dc997.png)
+![image](https://user-images.githubusercontent.com/91620434/199699368-4ec7f8ce-9738-484f-96e8-d5678f3eb38e.png)
+
+The above step, syncing in minutes is an optional step
+_Langkah diatas yaitu menyinkronisasikan dalam hitugan menit adalah langkah opsional
+
+If you want to exit the synchronization process then you can use the `CTRL+A+D` command and if you want to return then you can use the `screen r` command or check the status of the node
+_Jika ingin keluar dari proses sinkronisasi maka anda bisa menggunakan command `CTRL+A+D` dan jika igin kembali maka bisa dengan perintah `screen r` atau cek status node
+
 2. After Installation
 
+After istallation finished please load this code
+_Setelah instalasi selesai masukan code berikut
 
+```
+source $HOME/.bash_profile
+```
+
+The next step you have to check your validator whether it has synchronized the existing blocks in explorer by using the command below
+_Langkah selanjutnya anda harus periksa validator anda apakah sudah meyinkronkan block yamg ada dalam explorer dengan menggunakan perintah dibawah
+
+```
+okp4d status 2>&1 | jq .SyncInfo
+```
+
+If it is synchronized it will appear as shown below
+_Jika sudah tersinkroisasi maka akan mucul seperti gambar dibawah
+![image](https://user-images.githubusercontent.com/91620434/199698895-b24c6d09-886d-4f4a-8854-663d677a06f6.png)
+
+3. Crate Wallet
+
+The following command is a way to create a wallet, keep in mind to save all data that appears such as seeds and keys
+_Perintah berikut merupakan cara untuk membuat wallet, perlu diingat untuk menyimpan semua data yang muncul seperti seed dan key
+
+![image](https://user-images.githubusercontent.com/91620434/199700637-9a53b777-135e-47af-9b26-c97917e75995.png)
+
+```
+okp4d keys add $WALLET
+```
+> Recover wallet
+```
+okp4d keys add $WALLET --recover
+```
+> List wallet
+```
+okp4d keys list
+```
+> Save wallet information
+```
+OKP4D_WALLET_ADDRESS=$(okp4d keys show $WALLET -a)
+OKP4D_VALOPER_ADDRESS=$(okp4d keys show $WALLET --bech val -a)
+echo 'export OKP4D_WALLET_ADDRESS='${OKP4D_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export OKP4D_VALOPER_ADDRESS='${OKP4D_VALOPER_ADDRESS} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+To get a faucet you can easily access the following link
+_Untuk mendapatkan faucet anda bisa denga mudah mengakses lik berikut 
+
+https://faucet.okp4.network/
 
 ## My Experience
 
