@@ -1,4 +1,4 @@
-# OKP4
+# TUTORIAL OKP4 INCENTIVE TESTNET
 
 ![image](https://user-images.githubusercontent.com/91620434/199645755-250fe003-3e0d-4886-912b-f00b49a043dd.png)
 
@@ -49,7 +49,21 @@ I currently have an active server with the following specifications :
 | Storage  | 100GB of storage (SSD or NVME) |
 | Conection | Permanent Internet connection 10Mbps - 100Mbps | 
 
-#
+# TUTORIAL
+
+In this tutorial I will refer to the tutorial in the pinned message in the OKP4 region discord group Indonesia
+> _Pada tutorial kali ini saya akan merujuk tutorial pada pesan yang disematkan di grup discord wilayah OKP4 Indonesia_
+> Source : https://github.com/nodesxploit/testnet/blob/main/okp4/README.md
+
+1. Automatic Installation
+
+```
+wget -O okp4.sh https://raw.githubusercontent.com/nodesxploit/testnet/main/okp4/okp4.sh && chmod +x okp4.sh && ./okp4.sh
+```
+
+2. After Installation
+
+
 
 ## My Experience
 
