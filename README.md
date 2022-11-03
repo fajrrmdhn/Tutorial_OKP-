@@ -7,19 +7,20 @@ Hello, my name is Fajar Ramadhan, student from class 4-NK, Bandung State Polytec
 ## Experience
 I currently have an active server with the following specifications :
 
-> My Hardware
+> Hardware
 
-| CPU  | 4 Core CPU |
-| RAM | DDR4 8 GB  |
-| Storage  | 50 GB NVMe SSD |
-| Conection | 32 TB Traffic |
+|  Komponen |  Persyaratan Minimum |
+| ------------ | ------------ |
+| CPU  | Intel Core i7-8700 Hexa-Core  |
+| RAM | DDR4 64 GB  |
+| Penyimpanan  | 2x1 TB NVMe SSD |
+| koneksi | Port 1 Gbit/dtk |
 
-> Minimum Spesification
+> Software
 
-| CPU | 4x CPUs |
-| RAM | 8GB RAM |
-| STORAGE | 100GB of storage (SSD or NVME)|
-| Connection | Permanent Internet connection | 10Mbps - 100Mbps |
+|Komponen | Persyaratan Minimum |
+| ------------ | ------------ |
+| OS |  Ubuntu 18.04 atau lebih tinggi  | 
 
 With the following specifications, I have made my contribution as a validator in several incentive programs, including MassaLabs, Point Network, APTOS (AIT 2 & AIT 3) , Nulink, and Inery.
 
