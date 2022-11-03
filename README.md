@@ -4,6 +4,7 @@ This repository aspires to supply details about my work as a node operator and v
 
 ## Self Introduction 
 Hello, my name is Fajar Ramadhan, student from class 4-NK, Bandung State Polytechnic Telecommunication Engineering Program I understand crypto in 2019, at that time I was trained to the crypto airdrop by my friend. I am curious because crypto technology is corresponding to my intellectual level on campus besides that I can also earn money from this airdrop. Illustrations of airdrops that I participate in are promotional airdrops, testnet, IDO, and finally becoming a validator or node operator.
+> _Halo, nama saya Fajar Ramadhan, mahasiswi kelas 4-NK, Program Studi Teknik Telekomunikasi Politeknik Negeri Bandung Saya memahami crypto pada tahun 2019, saat itu saya dilatih untuk crypto airdrop oleh teman saya. Saya penasaran karena teknologi crypto sesuai dengan tingkat intelektual saya di kampus selain itu saya juga bisa mendapatkan uang dari airdrop ini. Ilustrasi airdrops yang saya ikuti adalah airdrops promosi, testnet, IDO, dan terakhir menjadi validator atau operator node._
 
 ## Hardware Requirement
 I currently have an active server with the following specifications :
@@ -29,6 +30,7 @@ I currently have an active server with the following specifications :
 ## My Experience
 
 With the following specifications, I have made my contribution as a validator in several incentive programs, including MassaLabs, Point Network, APTOS (AIT 2 & AIT 3) , Nulink, and Inery.
+
 
 ![image](https://user-images.githubusercontent.com/91620434/199631879-d15d2d49-976a-4f0b-bbae-bdfd338dc80c.png)
 
