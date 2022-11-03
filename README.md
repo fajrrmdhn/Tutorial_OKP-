@@ -8,12 +8,14 @@ Hello, my name is Fajar Ramadhan, student from class 4-NK, Bandung State Polytec
 I currently have an active server with the following specifications :
 
 > My Hardware
+
 | CPU  | 4 Core CPU |
 | RAM | DDR4 8 GB  |
 | Storage  | 50 GB NVMe SSD |
 | Conection | 32 TB Traffic |
 
 > Minimum Spesification
+
 | CPU | 4x CPUs |
 | RAM | 8GB RAM |
 | STORAGE | 100GB of storage (SSD or NVME)|
