@@ -1,3 +1,8 @@
+<p align="center">
+  ![191344012](https://user-images.githubusercontent.com/91620434/199717191-5ee78294-ee9f-451e-ad44-b001fdff288b.jpg)
+  </p>
+
+
 # Self Introduction
 Hello, my name is Fajar Ramadhan, student from class 4-NK, Bandung State Polytechnic Telecommunication Engineering Program I learn crypto in 2019, at that time I was trained to the crypto airdrop by my friend. I am curious because crypto technology is corresponding to my intellectual level on campus besides that I can also earn money from this airdrop. Illustrations of airdrops that I participate in are promotional airdrops, testnet, IDO, and finally becoming a validator or node operator.
 
