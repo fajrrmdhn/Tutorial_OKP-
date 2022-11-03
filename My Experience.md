@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="460" height="300" src="https://akademik.polban.ac.id/fotomhsrekap/191344012.jpg">
+  <img width="460" height="300" src="https://akademik.polban.ac.id/fotomhsrekap/191344012.jpg/460/650">
 </p>
 
 
